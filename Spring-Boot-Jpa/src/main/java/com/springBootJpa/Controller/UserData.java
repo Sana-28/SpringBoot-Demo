@@ -1,19 +1,30 @@
-package com.springBootJpa;
+package com.springBootJpa.Controller;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;  
 
 @Entity
 public class UserData {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String name;
 	private String address;
 	
 	public UserData() {
-		
 	}
+
+	public UserData(int id, String name, String address) {
+
+		this.id = id;
+		this.name = name;
+		this.address = address;
+	}
+
+
 
 	public int getId() {
 		return id;
@@ -37,6 +48,11 @@ public class UserData {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "UserData [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
 	
 }

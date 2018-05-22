@@ -1,10 +1,10 @@
-package com.springBootJpa;
+package com.springBootJpa.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserService{
 
 	@Autowired
 	UserRepository userRepository;  
@@ -13,5 +13,4 @@ public class UserService {
 		
 		userRepository.save(userData);
 	}
-
 }
