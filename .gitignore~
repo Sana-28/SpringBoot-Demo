@@ -1,2 +1,9 @@
 /.metadata/
 /.recommenders/
+
+**/target
+**/.settings
+**/Servers
+**/RemoteSystemsTempFiles
+
+**/application.properties
