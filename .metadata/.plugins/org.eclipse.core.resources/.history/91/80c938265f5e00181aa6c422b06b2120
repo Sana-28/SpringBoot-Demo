@@ -1,0 +1,5 @@
+package com.springBootJpa.Controller;
+
+public class CustomResponse {
+
+}

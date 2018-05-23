@@ -1,0 +1,11 @@
+package com.springBootJpa;
+
+//import org.springframework.data.repository.CrudRepository;  
+
+public class UserRepository extends CrudRepository{
+
+	public void save(UserData userData) {
+		
+		
+	}
+}

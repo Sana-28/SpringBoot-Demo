@@ -1,0 +1,26 @@
+package com.springBootJpa.Controller;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService{
+
+	@Autowired
+	UserRepository userRepository;  
+	
+	public void addUser(UserData userData) {
+		
+		userRepository.save(userData);
+	}
+
+	public void deleteUser(UserData userData) {
+		userRepository.delete(userData);
+	}
+
+	public Optional<UserData> getUser(String id) {
+		return null;
+	}
+}

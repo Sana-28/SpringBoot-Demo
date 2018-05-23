@@ -1,0 +1,13 @@
+package com.springBootJpa;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;  
+
+@Repository
+public class UserRepository extends JpaRepository{
+
+	public void save(UserData userData) {
+		
+		
+	}
+}

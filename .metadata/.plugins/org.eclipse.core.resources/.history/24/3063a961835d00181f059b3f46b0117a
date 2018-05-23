@@ -1,0 +1,12 @@
+package com.springBootJpa;
+
+import org.springframework.stereotype.Repository;  
+
+@Repository
+public class UserRepository extends{
+
+	public void save(UserData userData) {
+		
+		
+	}
+}

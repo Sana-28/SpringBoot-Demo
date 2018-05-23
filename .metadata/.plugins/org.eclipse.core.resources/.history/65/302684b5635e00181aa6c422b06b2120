@@ -1,0 +1,32 @@
+package com.springBootJpa.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+
+	@Autowired
+	UserService userService;
+	
+	   private CustomResponse customResponse = new CustomResponse();
+	
+	@RequestMapping(value="/adduser", method=RequestMethod.POST)  
+    public ResponseEntity<CustomResponse> addUser(@RequestBody UserData userData){  
+       userService.addUser(userData);
+       customResponse.setMessage("Saved successfully..");
+       customResponse.setStatusCode(100);
+	return new ResponseEntity<CustomResponse>(customResponse,HttpStatus.OK);
+    }  
+	
+	public void deleteUser(@RequestBody UserData userData) {
+		userService.deleteUser(userData);
+	}
+	
+	
+}
